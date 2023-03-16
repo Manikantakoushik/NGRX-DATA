@@ -3,7 +3,10 @@ NGRX-DATA-store
 The versions used in the Application are:-
 Angular version:-13.3.12
 Angular Cli Version:13.3.5
+
+
 ***And also you have to install the Ngrx versions like:-
+
 =>ngrx/store version: 13.1.0
 command for installing the store particular version of angular:
 npm install @ngrx/store@13.1.0
