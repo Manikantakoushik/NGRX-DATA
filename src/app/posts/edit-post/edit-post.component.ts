@@ -11,6 +11,8 @@ import { PostService } from '../post.service';
 export class EditPostComponent implements OnInit {
   editPostForm!:FormGroup;
   id!: string;
+  buttonDisabled = false;
+
   constructor(private postService:PostService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -31,6 +33,7 @@ export class EditPostComponent implements OnInit {
     
   }
   onEditPost(){
+    this.buttonDisabled = true;
     const postData={...this.editPostForm.value,id:this.id};
     this.postService.update(postData);
     this.router.navigate(['/posts']);

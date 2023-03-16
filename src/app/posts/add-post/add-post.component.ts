@@ -11,6 +11,8 @@ import { PostService } from '../post.service';
 })
 export class AddPostComponent implements OnInit {
   addPostForm!:FormGroup;
+  buttonDisabled = false;
+
   constructor(private postService:PostService,private router:Router) { }
 
   ngOnInit(): void {
@@ -21,6 +23,7 @@ export class AddPostComponent implements OnInit {
   }
 
   onAddPost(){
+    this.buttonDisabled = true;
     const post:Post = this.addPostForm.value;
     this.postService.add(post).subscribe((data)=>{
       this.router.navigateByUrl('/posts');
