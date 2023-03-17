@@ -28,3 +28,6 @@ command for installing the Dev-Tools particular version of angular:
 npm install @ngrx/store-devtools@13.1.0
 
 Dev-Tool is used to help like a Debugger.. in browers..
+
+
+*********----------------Backend Data base is used FireBase-------------------***************
